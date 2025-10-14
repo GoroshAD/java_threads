@@ -18,4 +18,8 @@ public class PhoneBook {
     public String findByNumber(String number) {
         return numberToPhone.get(number);
     }
+
+    public String findByName(String name) {
+        return null;
+    }
 }
