@@ -1,7 +1,4 @@
-import java.util.HashMap;
-import java.util.Map;
-import java.util.SortedSet;
-import java.util.TreeSet;
+import java.util.*;
 
 public class PhoneBook {
     private Map<String, String> phoneToNumber = new HashMap<>();
@@ -21,5 +18,9 @@ public class PhoneBook {
 
     public String findByName(String name) {
         return phoneToNumber.get(name);
+    }
+
+    public List<String> printAllNames() {
+        return null;
     }
 }

@@ -1,4 +1,8 @@
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PhoneBookTest {
@@ -36,5 +40,16 @@ public class PhoneBookTest {
 
         number = phoneBook.findByName("Bob");
         assertEquals("987-654-321", number);
+    }
+
+    @Test
+    public void testPrintAllNames() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Charlie", "111-111-111");
+        phoneBook.add("Alice", "123-456-789");
+        phoneBook.add("Bob", "987-654-321");
+
+        List<String> names = phoneBook.printAllNames();
+        assertEquals(Arrays.asList("Alice", "Bob", "Charlie"), names);
     }
 }
